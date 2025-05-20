@@ -42,6 +42,7 @@ Program: ${student.program}`;
     });
 });
 
+
 submitFeedbackBtn.addEventListener('click', () => {
   const feedback = feedbackText.value.trim();
   if (!feedback) {
@@ -49,10 +50,34 @@ submitFeedbackBtn.addEventListener('click', () => {
     return;
   }
 
-  // Here, you would normally send the feedback to a backend server or API.
-  // For this demo, just show a thank you message and clear input.
+  const payload = {
+    indexNumber: currentStudent.indexNumber,
+    surname: currentStudent.surname,
+    firstname: currentStudent.firstname,
+    othernames: currentStudent.othernames,
+    feedback: feedback
+  };
 
-  console.log('Feedback submitted for', currentStudent.indexNumber, ':', feedback);
-  feedbackMsg.textContent = 'Thank you for your feedback!';
-  feedbackText.value = '';
-});
+  fetch('https://script.google.com/macros/s/AKfycbxImF8PMit8O0bl0yoNfHbMGYR7bzMAJEg9xeB0fj8A0WfMS5_3uOFBRKpitA0y_WbkvQ/exec', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .then(response => {
+    if (response.success) {
+      feedbackMsg.textContent = 'Thank you for your feedback!';
+      feedbackText.value = '';
+    } else {
+      feedbackMsg.textContent = 'There was a problem submitting your feedback.';
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    feedbackMsg.textContent = 'Error submitting feedback.';
+  });
+
+  });
+
