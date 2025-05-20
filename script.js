@@ -62,7 +62,7 @@ submitFeedbackBtn.addEventListener('click', () => {
     method: 'POST',
     body: JSON.stringify(payload),
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/x-www-form-urlencoded'
     }
   })
   .then(res => res.json())
