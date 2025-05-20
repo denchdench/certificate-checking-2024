@@ -58,7 +58,7 @@ submitFeedbackBtn.addEventListener('click', () => {
     feedback: feedback
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbxImF8PMit8O0bl0yoNfHbMGYR7bzMAJEg9xeB0fj8A0WfMS5_3uOFBRKpitA0y_WbkvQ/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbyxWsRQdh_ibcfNo0nj6ocFSdaTX5c4h2eaqUQ-GofPlmybjI_cTlaTZO6K95si1XMWVA/exec', {
     method: 'POST',
     body: JSON.stringify(payload),
     headers: {
