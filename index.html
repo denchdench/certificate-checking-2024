@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Details Lookup</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Student Details Lookup</h1>
+
+    <label for="indexInput">Enter Index Number:</label>
+    <input type="text" id="indexInput" placeholder="e.g. STU001" />
+    <button id="searchBtn">Search</button>
+
+    <div id="result" class="result"></div>
+
+    <div id="feedbackSection" class="hidden">
+      <h3>Report Correction / Feedback</h3>
+      <textarea id="feedbackText" placeholder="Enter your feedback here..."></textarea>
+      <button id="submitFeedbackBtn">Submit Feedback</button>
+      <p id="feedbackMsg"></p>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
