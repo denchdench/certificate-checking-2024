@@ -3,13 +3,6 @@ body {
   padding: 20px;
   background: url(SCH-BAST-1536x1024.jpg);
 
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f5f5; /* Optional: or your background image */
 }
 
 .container {
