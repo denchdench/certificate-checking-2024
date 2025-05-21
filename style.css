@@ -1,18 +1,21 @@
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background: url(SCH-BAST-1536x1024.jpg);
-
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('SCH-BAST-1536x1024.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 0; /* Remove default padding to avoid offset */
 }
 
 .container {
   max-width: 500px;
   background: white;
   padding: 20px;
-  margin: auto;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
 }
 
 input, textarea {
