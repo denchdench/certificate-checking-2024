@@ -7,7 +7,37 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('ySCH-BAST-1536x1024.jpg'); /* Change this to your image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
 
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* Optional overlay to darken background for readability */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+      z-index: 0;
+    }
+  </style>
   <div class="container">
     <h1>Student Certificate Details Checking</h1>
 
