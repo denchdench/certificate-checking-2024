@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Student Certificate Details Checking</title>
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Certificate Details Checking</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-image: url('ySCH-BAST-1536x1024.jpg'); /* Change this to your image URL */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-image: url('ySCH-BAST-1536x1024.jpg'); /* Make sure the image file exists */
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      color: white;
     }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    /* Optional overlay to darken background for readability */
     .overlay {
       position: absolute;
       top: 0;
@@ -37,7 +33,69 @@
       background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
       z-index: 0;
     }
+
+    .container {
+      max-width: 500px;
+      width: 90%;
+      background: rgba(255, 255, 255, 0.95); /* Light background with transparency */
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1;
+      position: relative;
+      text-align: center;
+      color: #000;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      color: #000;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #feedbackText {
+      height: 80px;
+    }
+
+    h6 {
+      margin-top: 5px;
+      font-size: 0.85rem;
+      color: #333;
+    }
   </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
   <div class="container">
     <h1>Student Certificate Details Checking</h1>
 
@@ -57,6 +115,6 @@
     </div>
   </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
